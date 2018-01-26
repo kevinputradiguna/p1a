@@ -1,0 +1,24 @@
+.topmenu-container-fluid{
+    padding:0;
+    margin:0;
+    /* height:100%;
+    width:100%; */
+}
+
+.topmenu-row{
+    padding:0;
+    margin:0;
+    background-color: #ebedf9;
+    opacity: 0.7;
+}
+
+.topmenu-logo{
+    padding:0;
+    margin:0;
+}
+
+.topmenu-setting{
+    padding:0;
+    margin:0;
+    text-align: right;
+}

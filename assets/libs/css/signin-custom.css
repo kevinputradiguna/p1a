@@ -1,0 +1,130 @@
+.signin-container{
+    background-image: url("../../img/signin/Image-Login.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center; 
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    margin:0;
+}
+
+.signin-top{
+    height: 10%;
+    width: 100%;
+    padding: 0;
+    margin:0;
+}
+
+.signin-middle{
+    height:90%;
+    width:100%;
+    padding: 0;
+    margin:0;
+    text-align: center;
+}
+
+.login-form{
+    position:absolute;
+    width: 30%;
+    height:50%;
+    top:25%;
+    bottom:25%;
+    left:35%;
+    right:35%;
+    border: solid 1px white;
+    border-radius: 20px;
+    /* background-color: rgba(255,255,255,0.4); */
+}
+
+.login-form form{
+    position:absolute;
+    top:5%;
+    bottom:5%;
+    left:10%;
+    right:10%;
+}
+
+.signin-form-group{
+    padding-left:0;
+    padding-right:0;
+    margin-left:0;
+    margin-right:0;
+    margin-bottom:2%;
+    margin-top:2%;
+}
+
+.signin-captcha-image{
+    /* text-align: left; */
+    width: 60%;
+    background-color: white;
+    opacity: 0.5;
+    padding : 0;
+}
+
+
+    
+
+.signin-recaptcha-image{
+    background-color: white;
+    opacity: 0.5;
+    
+}
+.signin-recaptcha-image span{
+    font-size: 48px;
+    
+}
+
+/* .signin-input-custom{
+    width: 80%;
+    opacity: 0.5;
+    float: right;
+} */
+
+.signin-input-custom{
+    width: 100%;
+    padding-left: 10%;
+    opacity: 0.5;
+    float: right;
+}
+
+.signin-capcha-custom{
+    width: 100%;
+    opacity: 0.5;
+}
+
+.login-username{
+    background-image:url(/assets/img/icon/login-username-icon.png); 
+    background-repeat: no-repeat; 
+    background-size: 15px 15px;
+    background-position: 2% 40%;
+}
+
+.login-password{
+    background-image:url(/assets/img/icon/login-password-icon.png); 
+    background-repeat: no-repeat; 
+    background-size: 15px 15px;
+    background-position: 2% 40%;
+}
+
+/* .signin-form-group span{
+    font-size: 30px;
+} */
+
+.btn-login-custom{
+    width: 100%;
+}
+
+.login-forgot-text{
+    color: white;
+    font-style: italic; 
+}
+
+.login-header-text{
+    color: white;
+}
+
+.separator{
+    padding-left: 7%;
+    padding-right: 7%;
+}

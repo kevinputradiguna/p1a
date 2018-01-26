@@ -1,0 +1,16 @@
+.statistic-no-padding{
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.statistic-top{
+    height: 10%;
+    width: 100%;
+    padding: 0;
+    margin:0;
+}
+
+.statistic-subtopmenu{
+    margin:0;
+    padding:0;
+}

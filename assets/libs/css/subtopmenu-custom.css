@@ -1,0 +1,68 @@
+.subtopmenu-no-padding{
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.subtopmenu-container-fluid{
+    height:6%;
+    background-color: #05bafd;
+    padding:0;
+    margin:0;
+}
+
+.subtopmenu-text{
+    padding: 0;
+}
+
+.subtopmenu-text p{
+    text-align: center;
+    color:white;
+    font-size:14px;
+    padding: 12px 0;
+    margin-bottom: 0;
+}
+
+.subtopmenu-back div{
+    text-align: center;
+    color:black;
+    font-size:14px;
+    padding: 12px 0;
+    margin-bottom: 0;
+}
+
+.top-menu2{
+    padding: 0px;
+    margin-right: 0px;
+}
+
+.search-container button{
+    position: absolute;
+    padding: 6px 10px;
+    margin: 7px 0;
+    background-color: snow;
+    font-size: 17px;
+    border: none;
+    cursor: pointer;
+    height:70%;
+}
+
+.search-container button:hover {
+    background-color: white;
+}
+
+.search-container input[type=text]{
+    text-align: center;
+    height:70%;
+    margin: 7px 0;
+    width:95%;
+    font-size: 12px;
+    border: none;
+}
+
+.search-container input::focus{
+    outline: none;
+}
+
+.text-black{
+    color: black;
+}

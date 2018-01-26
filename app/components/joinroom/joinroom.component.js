@@ -66,24 +66,6 @@ function JoinroomController($scope, Rest, $q, $route, $location, $filter, $sce, 
             console.log('error catch');
         });
 
-
-        // var Api = $resource('/v1/roomList',{},{headers: { 'X-TOKEN': localStorage.getItem("edplusId") }});
-        // ctrl.tableParamsTable = new NgTableParams({
-        //   page: 1, // show first page
-        //   count: 5 // count per page
-        // }, {
-        //   filterDelay: 300,
-        //   getData: function(params) {
-        //     // ajax request to api
-        //     return Api.get(params.url()).$promise.then(function(data) {
-        //       params.total(data.inlineCount);
-        //       return data.results;
-        //     });
-        //   }
-        // });
-        // console.log(Api);
-        // console.log(tableParamsTable);
-
     };
 
 

@@ -35,11 +35,6 @@ function HistoryDetail($scope, $route,CONFIG,Rest,detailServices,locationService
         }
         });
 
-        // ctrl.updateMember = function(){
-        //     return members;
-        // }
-        
-        // ctrl.roommember = members;
         $scope.memberTable = new NgTableParams({ count: 8 },{dataset :members});
 
         })

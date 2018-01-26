@@ -1,60 +1,24 @@
 <div class="container-fluid history-no-padding">
-        <!-- <div class="row history-top">
-                <div ng-include="topMenu"></div>
-        </div> -->
         <div class="row history-subtopmenu">
-                <subtopmenu></subtopmenu>
+            <subtopmenu></subtopmenu>
         </div>
     <div class="row row-content">
         <div ng-include="sideBar"></div>
         <div class="col-md-9">
             <br><br>
-            <!-- <div class="row">
-                <div class="col-md-7"></div>
-                <div class="col-md-4">
-                    <input type="text" ng-model="searchRoomName" ng-keyup="completed(searchRoomName)" placeholder="Search By Room Name"/>
-                    <ul class="list-group" ng-model="hidethis" ng-hide="hidethis">
-                        <li class="list-group-item" ng-repeat="roomData in filterInstructor" ng-click="filterRoomBox(roomData)">{{roomData}}</li>
-                    </ul>
-                </div>
-                <div class="col-md-1">
-                </div>
-            </div> -->
             <div class="row">
                 <div class="col-md-1"></div>
                 <div class="col-md-10">
                     <div class="row">
                         <table class="table" ng-table="roomTable">
-                                <tr ng-repeat="room in $data" ng-click="redirect(room)">
-                                    <td title="'No'" style="text-align:center">{{room.No}}</td>
-                                    <td title="'Date'" style="text-align:center">{{room.scheduleShow}}</td>
-                                    <td title="'Room Name'" style="text-align:center">{{room.roomName}}</td>
-                                    <td title="'Duration'" style="text-align:center">{{room.duration}}</td>
-                                    <td title="'Total Member'" style="text-align:center">{{room.totalMember}}</td>
-                                </tr>
-                            </table>
-
-
-                        <!-- <table class="table" >
-                            <thead>
-                                <tr>
-                                    <th style="text-align:center;">No</th>
-                                    <th style="text-align:center;">Date</th>
-                                    <th style="text-align:center;">Room Name</th>
-                                    <th style="text-align:center;">Duration</th>
-                                    <th style="text-align:center;">Total Member</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr ng-repeat="room in roomList" ng-click="redirect(room)">
-                                    <td>{{room.No}}</td>
-                                    <td style="text-align:center;">{{room.scheduleShow}}</td>
-                                    <td style="text-align:center;">{{room.roomName}}</td>
-                                    <td style="text-align:center;">{{room.duration}}</td>
-                                    <td style="text-align:center;">{{room.totalMember}}</td>
-                                </tr>
-                            </tbody>
-                        </table> -->
+                            <tr ng-repeat="room in $data" ng-click="redirect(room)">
+                                <td title="'No'" style="text-align:center;">{{room.No}}</td>
+                                <td title="'Date'" style="text-align:center;">{{room.scheduleShow}}</td>
+                                <td title="'Room Name'" style="text-align:center;">{{room.roomName}}</td>
+                                <td title="'Duration'" style="text-align:center;">{{room.duration}}</td>
+                                <td title="'Total Member'" style="text-align:center;">{{room.totalMember}}</td>
+                            </tr>
+                        </table>
                     </div>
                 </div>
                 <div class="col-md-1"></div>

@@ -1,0 +1,16 @@
+.history-detail-header-container{
+    background-color: #35ddfb;
+}
+
+.history-detail-header-row{
+    padding-bottom: 1%;
+    padding-top: 1%;
+}
+
+.history-detail-header-row .col-md-2{
+    text-align: right;
+}
+
+.history-detail-header-row > div{
+    font-family: calibri, sans-serif;
+}

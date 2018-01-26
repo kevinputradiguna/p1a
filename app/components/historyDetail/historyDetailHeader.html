@@ -1,34 +1,34 @@
-<div class="container-fluid">
+<div class="container-fluid history-detail-header-container">
     <div class="row">
         <div class="col-md-6">
-            <div class="row">
+            <div class="row history-detail-header-row">
                 <div class="col-md-2">
-                    <!--image home-->
+                    <img ng-src="assets/img/icon-history-detail/Icon-Room-Name.png" height="3%" width="30%">
                 </div>
                 <div class="col-md-4">
-                    <label>Room Name</label>
+                    <label>Room Name:</label>
                 </div>
                 <div class="col-md-6">
                     {{$ctrl.roomheader.roomName}}
                 </div>
             </div>
-            <div class="row">
+            <div class="row history-detail-header-row">
                 <div class="col-md-2">
-                    <!--image calendar-->
+                    <img ng-src="assets/img/icon-history-detail/Icon-Date.png" height="3%" width="30%">
                 </div>
                 <div class="col-md-4">
-                    <label>Date</label>
+                    <label>Date:</label>
                 </div>
                 <div class="col-md-6">
                     {{$ctrl.roomheader.schedule | date:'yyyy-MM-dd | HH:mm:ss'}} {{timezoneString}}
                 </div>
             </div>
-            <div class="row">
+            <div class="row history-detail-header-row">
                 <div class="col-md-2">
-                    <!--image duration-->
+                    <img ng-src="assets/img/icon-history-detail/Icon-Total-Duration.png" height="3%" width="30%">
                 </div>
                 <div class="col-md-4">
-                    <label>Duration</label>
+                    <label>Duration:</label>
                 </div>
                 <div class="col-md-6">
                     {{$ctrl.roomheader.duration}}
@@ -36,23 +36,23 @@
             </div>
         </div>
         <div class="col-md-6">
-            <div class="row">
+            <div class="row history-detail-header-row">
                 <div class="col-md-2">
-                    <!--image instructor-->
+                    <img ng-src="assets/img/icon-history-detail/Icon-Instructor-Name.png" height="3%" width="30%">
                 </div>
                 <div class="col-md-4">
-                    <label>Instructor</label>
+                    <label>Instructor:</label>
                 </div>
                 <div class="col-md-6">
                     {{$ctrl.instructor.name}}
                 </div>
             </div>
-            <div class="row">
+            <div class="row history-detail-header-row">
                 <div class="col-md-2">
-                    <!--image member-->
+                    <img ng-src="assets/img/icon-history-detail/Icon-Total-Member.png" height="3%" width="30%">
                 </div>
                 <div class="col-md-4">
-                    <label>Total Members</label>
+                    <label>Total Members:</label>
                 </div>
                 <div class="col-md-6">
                     {{$ctrl.roomheader.totalMember}}

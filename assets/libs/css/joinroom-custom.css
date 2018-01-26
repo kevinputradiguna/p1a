@@ -1,0 +1,16 @@
+.joinroom-no-padding{
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.joinroom-top{
+    height: 10%;
+    width: 100%;
+    padding: 0;
+    margin:0;
+}
+
+.joinroom-subtopmenu{
+    margin:0;
+    padding:0;
+}
