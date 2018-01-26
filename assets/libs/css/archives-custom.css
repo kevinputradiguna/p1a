@@ -1,0 +1,16 @@
+.archives-no-padding{
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.archives-top{
+    height: 10%;
+    width: 100%;
+    padding: 0;
+    margin:0;
+}
+
+.archives-subtopmenu{
+    margin:0;
+    padding:0;
+}

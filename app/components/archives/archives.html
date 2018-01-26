@@ -1,0 +1,15 @@
+<div class="container-fluid archives-no-padding">
+    <div class="row archives-top">
+            <div ng-include="topMenu"></div>
+    </div>
+    <div class="row archives-subtopmenu">
+            <subtopmenu></subtopmenu>
+    </div>
+    <div class="row row-content">
+        <div ng-include="sideBar"></div>
+        <div class="col-md-9">
+            <br>
+            <archivesdetail ng-repeat="archive in archiveList" archives = "archive"></archivesdetail>
+        </div>
+    </div>
+</div>

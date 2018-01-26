@@ -1,0 +1,16 @@
+.evaluation-no-padding{
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.evaluation-top{
+    height: 10%;
+    width: 100%;
+    padding: 0;
+    margin:0;
+}
+
+.evaluation-subtopmenu{
+    margin:0;
+    padding:0;
+}

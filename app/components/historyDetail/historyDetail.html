@@ -1,0 +1,32 @@
+<div class="container-fluid history-no-padding">
+        <!-- <div class="row history-top">
+                <div ng-include="topMenu"></div>
+        </div> -->
+        <div class="row history-subtopmenu">
+                <subtopmenu></subtopmenu>
+        </div>
+        <div class="row row-content">
+            <div ng-include="sideBar"></div>
+        <br><br>
+        <div class="col-md-9">
+            <div class="row">
+                <historydetailheader roomheader ="$ctrl.roomheader" instructor ="$ctrl.instructor"></historydetailHeader>
+            </div>
+        </div>
+        <div class="col-md-1"></div>
+        <div class="col-md-7">
+            <div class="row">
+                    <div class="row">
+                            <table class="table" ng-table="memberTable">
+                                <tr ng-repeat="member in $data">
+                                    <td title="'No'" style="text-align:center">{{member.No}}</td>
+                                    <td title="'Member Name'" filter="{memberName : 'text'}" style="text-align:center">{{member.memberName}}</td>
+                                    <td title="'Passing'" filter="{passing : 'select'}" filter-data="[{id: 'true', title: 'true'}, {id: 'false', title: 'false'}]" style="text-align:center">{{member.passing}}</td>
+                                </tr>
+                            </table>
+                    </div>
+            </div>
+        </div>  
+        <div class="col-md-1"></div>
+    </div>
+</div>

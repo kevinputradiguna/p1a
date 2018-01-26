@@ -1,0 +1,51 @@
+<div class="container-fluid signin-container">
+    <div class="row signin-top">
+        <div ng-include="topMenu"></div>
+    </div>
+    <div class="row signin-middle">
+        <div class="col-md-4 login-form">
+            <form> 
+                <div class="form-group">
+                        <div class="col-md-12 signin-form-group">
+                            <label class="login-header-text">LOGIN</label>
+                        </div>
+                    </div>
+                <div class="form-group">
+                    <div class="col-md-12 signin-form-group">
+                        <input type="text" class="form-control signin-input-custom login-username" name="emailAddress" ng-model="emailAddress" placeholder="Email Address"/>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-12 signin-form-group">
+                        <input type="password" class="form-control signin-input-custom login-password" name="password" ng-model="password" placeholder="Password"/>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-8 signin-captcha-image">
+                        <img id="signin-captchaImage" ng-src="assets/img/Edplus.png" width="100%" height="15%">
+                    </div>
+                    <div class="col-md-1 separator">
+                    </div>
+                    <div class="col-md-3 signin-recaptcha-image">
+                        <a ng-href="javascript:void(0)" ><span class="fa fa-refresh" aria-hidden="true" ng-click="reCaptcha()"></span></a>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-12 signin-form-group">
+                        <input type="text" class="form-control signin-capcha-custom text-center" name="captchaSecret" ng-model="captchaSecret" placeholder="Input"/>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-12 signin-form-group">
+                        <a ng-href="javascript:void(0)" ng-click="login()"><span class="btn btn-primary btn-login-custom">LOGIN</span></a>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-12 signin-form-group">
+                        <a ng-href="javascript:void(0)" ng-click="forgotPassword()" class="login-forgot-text pull-right"><span>Forgot Password?</span></a>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

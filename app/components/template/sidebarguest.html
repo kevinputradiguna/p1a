@@ -1,0 +1,51 @@
+<div class="col-md-3 col-md-3-sidebarguest">
+<div class="side-menu sidebar-inverse side-menu-guest">
+    <nav class="navbar navbar-default navbar-guest" role="navigation">
+        <div class="side-menu-container">
+            <div class="navbar-header">
+            </div>
+            <ul class="nav sidebar-nav">
+                <li>
+                    <a ng-href="#/joinroom" ng-class="{'active' : $route.current.activetab == 'joinRoom'}">
+                        <div class="menu-clickable">
+                        <span><img ng-src="/assets/img/icon-menu/Icon-Join-Room.png"  alt="" width="10%" height="30%" /></span>
+                        <span class="title-side-menu-admin {{ $route.current.activetab == 'joinRoom'? 'active-text-side-menu-guest':'' }}">Join Room</span>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a ng-href="#/history" ng-class="{'active' : $route.current.activetab == 'history'}">
+                        <!--<span class="icon-side-menu-admin fa fa-clock-o {{ $route.current.activetab == 'history'? 'active-text-side-menu-admin':'' }}"></span>-->
+                        <!--<div class="nav-icon-custom"><img ng-src="assets/img/Edplus.png" class="signin-image" alt="" /></div>-->
+                        <div class="menu-clickable">
+                        <span><img ng-src="/assets/img/icon-menu/Icon-History.png"  alt="" width="10%" height="30%" /></span>
+                        <span class="title-side-menu-admin {{ $route.current.activetab == 'history'? 'active-text-side-menu-guest':'' }}">History</span>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a ng-href="#/statistic" ng-class="{'active' : $route.current.activetab == 'statistic'}">
+                        <!--<span class="icon-side-menu-admin fa fa-pie-chart {{ $route.current.activetab == 'statistic'? 'active-text-side-menu-admin':'' }}"></span>-->
+                        <!--<div class="nav-icon-custom"><span><img  ng-src="assets/img/Edplus.png" class="signin-image" alt="" /></div>-->
+                        <div class="menu-clickable">
+                        <span><img ng-src="/assets/img/icon-menu/Icon-Statistic.png"  alt="" width="10%" height="30%" /></span>
+                        <span class="title-side-menu-admin {{ $route.current.activetab == 'statistic'? 'active-text-side-menu-guest':'' }}">Statistic</span>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a ng-href="#/evaluation" ng-class="{'active' : $route.current.activetab == 'evaluation'}">
+                        <!--<span class="icon-side-menu-admin fa fa-map-pin {{ $route.current.activetab == 'evaluation'? 'active-text-side-menu-admin':'' }}"></span>-->
+                        <!--<div class="nav-icon-custom" ><span><img ng-src="assets/img/Edplus.png" class="signin-image" alt="" /></div>-->
+                        <div class="menu-clickable">
+                        <span><img ng-src="/assets/img/icon-menu/Icon-Evaluation.png"  alt="" width="10%" height="30%" /></span>
+                        <span class="title-side-menu-admin {{ $route.current.activetab == 'evaluation'? 'active-text-side-menu-guest':'' }}">Evaluation</span>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </nav>
+</div>
+</div>

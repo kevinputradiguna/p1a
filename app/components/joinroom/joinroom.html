@@ -1,0 +1,28 @@
+<div class="container-fluid joinroom-no-padding">
+        <!-- <div class="row joinroom-top">
+                <div ng-include="topMenu"></div>
+        </div> -->
+        <div class="row joinroom-subtopmenu">
+                <subtopmenu></subtopmenu>
+        </div>
+        <div class="row row-content">
+            <div ng-include="sideBar"></div>
+        <br><br>
+        <div class="col-md-1">
+        </div>  
+        <div class="col-md-7">     
+            <div class="row">
+                <table class="table" ng-table="tableParamsTable" show-filter="false" >                   
+                        <tr ng-repeat="data in $data">
+                            <td title="'Room Name'" style="text-align:center">{{ data.roomName }}</td>
+                            <td title="'Schedule'" style="text-align:center">
+                                <a ng-show="{{data.showStartButton }}" class="btn btn-danger button-table-orange" ng-click="joiningRoom(data.roomName,data.schedule)" >Start Room</a>
+                                <a ng-show="{{data.showJoinButton }}" class="btn btn-danger button-table-orange" ng-click="joiningRoom(data.roomName,data.schedule)" >Join Room</a>
+                                <a ng-show="{{data.showSchedule}}" class="btn btn-primary button-table-blue">{{data.scheduleShow}}</a>
+                            </td>
+                        </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

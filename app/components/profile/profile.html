@@ -1,0 +1,65 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+            <div ng-include="topMenu"></div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-3">
+            <div ng-include="sideBar"></div>
+        </div>
+        <div class="col-md-9">
+            <div class="row">
+                <div class="col-md-1">
+                </div>
+                <div class="col-md-5">
+                    <div class="row personal-header">
+                        <div class="col-md-3">
+                            <img ng-src="assets/img/icon/personal-information-icon.png">
+                        </div>
+                        <div class="col-md-9">
+                            <h4>Personal Information</h4>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <img ng-src="{{profilePicture}}">
+                            <a ng-href="javascript:void(0)" ng-click="browsePicture"><span class="btn btn-danger btn-sm">Upload</span></a>
+                        </div>
+                        <div class="col-md-8">
+                            <div><label>First Name</label><input type="text" ng-model="firstName"/></div>
+                            <div><label>Last Name</label><input type="text" ng-model="lastName"/></div>
+                            <div><label>Email</label><input type="text" ng-model="email"/></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-1">
+                </div>
+                <div class="col-md-4">
+                    <div class="row medical-header">
+                        <div class="col-md-3">
+                            <img ng-src="assets/img/icon/medical-information-icon.png">
+                        </div>
+                        <div class="col-md-9">
+                            <h4>Medical Information</h4>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-8">
+                            <div><label>Company</label><input type="text" ng-model="company"/></div>
+                            <div><label>Specialist</label><input type="text" ng-model="specialist"/></div>
+                            <div><label>ID Doctor</label><input type="text" ng-model="idDoctor"/></div>
+                        </div>
+                        <div class="col-md-4">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-1">
+                </div>
+            </div>
+            <div class="row">
+                <a ng-href="javascript:void(0)" ng-click="updateUserProfile()" ><span class="btn btn-danger btn-sm">UPDATE</span></a>
+            </div>
+        </div>
+    </div>
+</div>
