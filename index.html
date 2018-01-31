@@ -19,6 +19,9 @@
         <link rel="stylesheet" type="text/css" href="assets/libs/css/historydetail-header-custom.css">
         <link rel="stylesheet" type="text/css" href="assets/libs/css/joinroom-custom.css">
         <link rel="stylesheet" type="text/css" href="assets/libs/css/index.css">
+		<link rel="stylesheet" type="text/css" media="screen" href="assets/libs/css/conference-custom.css">
+        <link rel="stylesheet" type="text/css" media="screen" href="assets/libs/css/theme.css">
+        <link rel="stylesheet" type="text/css" media="screen" href="assets/libs/css/animate.min.css">
         
         <script src="assets/libs/angularjs/jquery.min.js"/></script>
         <script src="assets/libs/angularjs/bootstrap-3.3.7.js"/></script>
@@ -30,15 +33,23 @@
         <script src="assets/libs/angularjs/angular-sanitize.min.js"/></script>
         <script src="assets/libs/angularjs/angular-resource.js"/></script>
         <script src="https://static.opentok.com/v2/js/opentok.min.js"></script>
-
-        
+		<script src="assets/libs/angularjs/angular-forms.min.js"></script>
+        <script src="assets/libs/angularjs/angular-filters.js"></script>
+        <script src="assets/libs/angularjs/angular-animate.min.js"></script>
         
         <script src="app.js"/></script>
         <script src="app.routes.js"/></script>
         <script src="config.js"/></script>
-
-        <script src="app/shared/service/rest.js"/></script>
+		<script src="app/shared/directive/app.directive.js"></script>
+        <script src="app/shared/filter/app.filter.js"></script>
         
+        <script src="app/shared/service/rest.js"/></script>
+        <link rel="stylesheet" type="text/css" media="screen" href="assets/libs/angular-block-ui/angular-block-ui.css">
+        <script src="assets/libs/angular-block-ui/angular-block-ui.min.js"></script>
+        <script src="assets/libs/workers/ng-webworker.js"></script>
+        <Script src="assets/libs/workers/worker_wrapper.js"></Script>
+        <script src="assets/libs/paginate/dirPagination.js"></script>
+        <script src="assets/libs/angular-modal-service/angular-modal-service.min.js"></script>      
         <!-- angular component -->
         <script src="app/components/createroom/createroom.component.js"></script>
         <script src="app/components/evaluation/evaluation.component.js"></script>
@@ -54,6 +65,7 @@
         <script src="app/components/subtopmenu/subtopmenu.component.js"></script>
         <script src="app/components/archives/archives.component.js"></script>
         <script src="app/components/statistic/statistic.component.js"></script>
+        <script src="app/components/conference/conference.component.js"></script>
 
         
         <script src="index.ctrl.js"/></script>

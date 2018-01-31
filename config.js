@@ -5,3 +5,9 @@ app.constant('CONFIG', {
     'sidebarGuest' : 'app/components/template/sidebarguest.html',
     'topMenu' : 'app/components/template/topmenu.html'
 });
+
+// app.config(function (blockUIConfig) {
+//     blockUIConfig.message = 'Loading ..';
+//     blockUIConfig.delay = 200;
+
+// });

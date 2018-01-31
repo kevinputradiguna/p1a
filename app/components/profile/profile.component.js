@@ -21,7 +21,8 @@ function ProfileController($scope,Rest,$q){
         });
     };
 
-    $scope.updateUserProfile = function(){
+    $scope.updateUserProfile = function($event){
+		$event.preventDefault();
         var profile = {}
         profile['firstName'] = $scope.firstName;
         profile['lastName'] = $scope.lastName;
