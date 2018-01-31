@@ -27,7 +27,7 @@
                     <div class="col-md-1 separator">
                     </div>
                     <div class="col-md-3 signin-recaptcha-image">
-                        <a ng-href="javascript:void(0)" ><span class="fa fa-refresh" aria-hidden="true" ng-click="reCaptcha()"></span></a>
+                        <a href="#" ><span class="fa fa-refresh" aria-hidden="true" ng-click="reCaptcha($event)"></span></a>
                     </div>
                 </div>
                 <div class="form-group">
@@ -37,12 +37,12 @@
                 </div>
                 <div class="form-group">
                     <div class="col-md-12 signin-form-group">
-                        <a ng-href="javascript:void(0)" ng-click="login()"><span class="btn btn-primary btn-login-custom">LOGIN</span></a>
+                        <a href="#" ng-click="login($event)"><span class="btn btn-primary btn-login-custom">LOGIN</span></a>
                     </div>
                 </div>
                 <div class="form-group">
                     <div class="col-md-12 signin-form-group">
-                        <a ng-href="javascript:void(0)" ng-click="forgotPassword()" class="login-forgot-text pull-right"><span>Forgot Password?</span></a>
+                        <a href="#" ng-click="forgotPassword($event)" class="login-forgot-text pull-right"><span>Forgot Password?</span></a>
                     </div>
                 </div>
             </form>

@@ -1,7 +1,7 @@
 <div class="col-md-4 signin-popup-container">
     <form>
         <div class="alert alert-danger alert-dismissible" role="alert" ng-show="alertValue">
-            <a ng-href="javascript:void(0)" data-dismiss="alert" class="close" data-dismiss="alert" ng-show="alertValue" aria-label="close">x</a>
+            <a href="#" data-dismiss="alert" class="close" data-dismiss="alert" ng-show="alertValue" aria-label="close">x</a>
             <h6><strong>Failed to login, please try again!</strong></h6>
         </div>
         <div class="signin-first-row-container">
@@ -15,11 +15,11 @@
         </div>
         <div class="signin-fourth-row-container">
             <input type="text" class="signin-fourth-row-input" ng-model="captchaSecret"/>
-            <a ng-href="javascript:void(0)" ng-click="reCaptcha()"><img ng-src="assets/img/icon/refresh-icon.png" height="24" width="24" style="background-color: lightgrey;"></a>
+            <a href="#" ng-click="reCaptcha()"><img ng-src="assets/img/icon/refresh-icon.png" height="24" width="24" style="background-color: lightgrey;"></a>
         </div>
         <div class="signin-fifth-row-container">
             <div class="null-container"></div>
-                <a ng-href="javascript:void(0)" ng-click="login()" ><span class="btn btn-danger btn-sm">LOGIN</span></a>
+                <a href="#" ng-click="login()" ><span class="btn btn-danger btn-sm">LOGIN</span></a>
             <div class="null-container"></div>
         </div>
     </form>

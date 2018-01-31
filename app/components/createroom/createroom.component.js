@@ -102,7 +102,8 @@ function CreateRoomController($scope, Rest, $q, $sce, $route, $location, $compil
         })
     };
 
-    $scope.createRoom = function () {
+    $scope.createRoom = function ($event) {
+        $event.preventDefault();
         var roomObject = {};
         roomObject['instructor'] = jsonInstructor;
         roomObject['roomName'] = $scope.roomName;
