@@ -14,3 +14,12 @@
     margin:0;
     padding:0;
 }
+
+.table-history th{
+    background-color: #35ddfb ;
+}
+
+.table-history tr{
+    background-color: #cfe6ea ; 
+    border-top: 3px solid white;
+}

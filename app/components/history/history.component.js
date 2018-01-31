@@ -25,7 +25,8 @@ function HistoryController($scope, $route, $filter,CONFIG,Rest,detailServices,lo
                 timezoneString = "WIT";
             }
             angular.forEach(allRoomList, function(entry) {
-                entry['scheduleShow'] = $filter('date')(entry['schedule'], "yyyy-MM-dd | HH:mm:ss") + " " + timezoneString;
+                // entry['scheduleShow'] = $filter('date')(entry['schedule'], "yyyy-MM-dd | HH:mm:ss") + " " + timezoneString;
+                entry['scheduleShow'] = $filter('date')(entry['schedule'], "dd MMMM yyyy");
                 entry['No'] = i;
                 i++;
             });

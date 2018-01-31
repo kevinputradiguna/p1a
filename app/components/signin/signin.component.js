@@ -25,7 +25,8 @@ function SignInController($scope,Rest,$q, $location,CONFIG){
         })
     };
 
-    $scope.reCaptcha = function(){
+    $scope.reCaptcha = function($event){
+        $event.preventDefault();
         ctrl.generateCaptcha().then(function(result){
             document.getElementById('signin-captchaImage').src = result.data.image;
             localStorage.setItem('captchaId', result.data.id);
@@ -42,7 +43,8 @@ function SignInController($scope,Rest,$q, $location,CONFIG){
     
     };
     
-    $scope.login = function(){
+    $scope.login = function($event){
+        $event.preventDefault();
         var loginParam = {};
         loginParam['loginId'] = $scope.emailAddress;
         loginParam['password'] = $scope.password;

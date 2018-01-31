@@ -14,3 +14,25 @@
     margin:0;
     padding:0;
 }
+
+.table-joinroom th{
+    background-color: #35ddfb ;
+}
+
+.table-joinroom tr{
+    background-color: #cfe6ea ; 
+    border-top: 3px solid white;
+}
+
+.button-table-orange{
+    background-color: #fc4343;
+    border-color: #fc4343;
+    width: 43%;
+  }
+      
+.button-table-blue{
+    color: black;
+    background-color: #05bafd;
+    border-color: #05bafd;
+    /* width: 167.863px; */
+}

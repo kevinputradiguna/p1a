@@ -38,13 +38,13 @@ function JoinroomController($scope, Rest, $q, $route, $location, $filter, $sce, 
                     entry['showSchedule'] = false;
                 
                     // entry['scheduleShow'] = $sce.trustAsHtml('<a id=\"'+entry['roomName']+'\" class=\"btn btn-danger\" onclick=\"join('+entry['roomName']+')\">Join Room</a>');
-                    // entry['scheduleShow'] = $sce.trustAsHtml('<a ng-href=\"javascript:void(0);\" ng-click=\"joiningRoom(\''+entry['roomName']+'\','+entry['schedule']+');\" class=\"btn btn-danger\">Start Room</a>');
+                    // entry['scheduleShow'] = $sce.trustAsHtml('<a ng-href=\"#;\" ng-click=\"joiningRoom(\''+entry['roomName']+'\','+entry['schedule']+');\" class=\"btn btn-danger\">Start Room</a>');
                 }
                 else if(timeUtc > entry['schedule'] && entry['instructorId'] != localStorage.getItem('userId') && entry['status'] == 3){
                     entry['showStartButton'] = false;
                     entry['showJoinButton'] = true;
                     entry['showSchedule'] = false;
-                    // entry['scheduleShow'] = $sce.trustAsHtml('<a ng-href=\"javascript:void(0);\" ng-click=\"joiningRoom();\" class=\"btn btn-primary\">Join Room</a>');
+                    // entry['scheduleShow'] = $sce.trustAsHtml('<a ng-href=\"#;\" ng-click=\"joiningRoom();\" class=\"btn btn-primary\">Join Room</a>');
                 }
                 else{
                     entry['showStartButton'] = false;

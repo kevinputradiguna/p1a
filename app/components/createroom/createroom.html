@@ -71,6 +71,15 @@
             <br>
             <div class="row">
                 <div class="col-md-4">
+                    <label>File Reference(s)</label>
+                </div>
+                <div class="col-md-8">
+                    <input type="file" class="fileInput" name="files" ng-model="files" multiple/>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col-md-4">
                     <label>Total Members Invited</label>
                 </div>
                 <div class="col-md-8">
@@ -94,7 +103,7 @@
                 <div class="col-md-2">
                 </div>
                 <div class="col-md-8 text-center">
-                    <a class="btn btn-primary button-blue" ng-href="javascript:void(0);" ng-click="createRoom();">Create Room</a>
+                    <a class="btn btn-primary button-blue" href="#" ng-click="createRoom($event);">Create Room</a>
                 </div>
             </div>
         </div>

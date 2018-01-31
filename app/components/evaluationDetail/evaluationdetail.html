@@ -13,22 +13,31 @@
         <div class="col-md-7">     
             <div class="row">
                 <form name="update-form">
-                <table class="table" ng-table="tableParamsTable" show-filter="false" >                   
+                <table class="table table-evaluation" ng-table="tableParamsTable" show-filter="false" >                   
                         <tr ng-repeat="data in $data">
-                            <td title="'Member Name'" style="text-align:center">{{  data.memberName  }}</td>
-                            <td title="'Passing Status'" style="text-align:center">{{ data.passingStatic == true ? 'Pass': 'Fail' }}</td>
-                            <td colspan="2" title="'Passing Quiz'" style="text-align:center"><input type="radio" name="radio{{ data.NO }}"  ng-model="data.passing" ng-value="true"  /><label style="color: green;">Pass</label>
+                            <td title="'Member Name'" class="centerText">{{  data.memberName  }}</td>
+                            <td title="'Passing Status'" class="centerText">{{ data.passingStatic == true ? 'Pass': 'Fail' }}</td>
+                            <td colspan="2" title="'Passing Quiz'" class="centerText">
+                                <label class="radio-evaluation text-blue">Pass
+                                    <input type="radio" name="radio{{ data.NO }}"  ng-model="data.passing" ng-value="true">
+                                    <span class="checkmark-pass"></span>
+                                  </label>
+                                  <label class="radio-evaluation text-red">Fail
+                                        <input type="radio" name="radio{{ data.NO }}"  ng-model="data.passing" ng-value="false">
+                                        <span class="checkmark-fail"></span>
+                                      </label></td>
+                            <!-- <td colspan="2" title="'Passing Quiz'" class="centerText"><input type="radio" name="radio{{ data.NO }}"  ng-model="data.passing" ng-value="true"  /><label style="color: green;">Pass</label>
                                 <input type="radio" name="radio{{ data.NO }}"  ng-model="data.passing" ng-value="false" /><label style="color: red;">Fail</label>
-                            </td>
+                            </td> -->
                         </tr>
                 </table>
                 </form>
             </div>
             <div class = "col-md-2 col-md-offset-10">
-                <a ng-href="javascript:void(0);" ng-click="update();" class="btn btn-primary span12">Update</a>
+                <a href="#" ng-click="update($event);" class="btn btn-primary span12">Update</a>
         </div>
         <!-- <div class = "col-md-2 col-md-offset-10">
-            <a ng-href="javascript:void(0);" ng-click="backTo();" class="btn btn-primary span12 ">Back</a>
+            <a ng-href="#" ng-click="backTo();" class="btn btn-primary span12 ">Back</a>
             </div>
         </div> -->
 

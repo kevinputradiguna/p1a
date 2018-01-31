@@ -10,13 +10,13 @@
                 <div class="col-md-1"></div>
                 <div class="col-md-10">
                     <div class="row">
-                        <table class="table" ng-table="roomTable">
+                        <table class="table table-history" ng-table="roomTable">
                             <tr ng-repeat="room in $data" ng-click="redirect(room)">
-                                <td title="'No'" style="text-align:center;">{{room.No}}</td>
-                                <td title="'Date'" style="text-align:center;">{{room.scheduleShow}}</td>
-                                <td title="'Room Name'" style="text-align:center;">{{room.roomName}}</td>
-                                <td title="'Duration'" style="text-align:center;">{{room.duration}}</td>
-                                <td title="'Total Member'" style="text-align:center;">{{room.totalMember}}</td>
+                                <td title="'No'" class="centerText">{{room.No}}</td>
+                                <td title="'Date'" class="centerText">{{room.scheduleShow}}</td>
+                                <td title="'Room Name'" class="centerText">{{room.roomName}}</td>
+                                <td title="'Duration'" class="centerText">{{room.duration}}</td>
+                                <td title="'Total Member'" class="centerText">{{room.totalMember}}</td>
                             </tr>
                         </table>
                     </div>

@@ -14,3 +14,19 @@
     margin:0;
     padding:0;
 }
+
+.table-statistic tr{
+    background-color: #35ddfb ; 
+}
+
+.table-statistic tr td{
+    vertical-align: middle !important;
+}
+
+.icon-statistic{
+    width: 8%;
+}
+
+.tableName-statistic{
+    width: 30%;
+}

@@ -36,7 +36,8 @@ function EvaluationDetailController($scope, Rest, $q, $route, $location, CONFIG,
         $scope.arrays[no]['passing'] = true;
     }
 
-    $scope.update = function(){
+    $scope.update = function($event){
+        $event.preventDefault();
         console.log($scope.arrays);
         var hdrs = {
             "X-TOKEN": localStorage.getItem("edplusId")

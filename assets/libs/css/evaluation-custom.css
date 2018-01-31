@@ -14,3 +14,130 @@
     margin:0;
     padding:0;
 }
+
+.table-evaluation th{
+    background-color: #35ddfb ;
+}
+
+.table-evaluation tr{
+    background-color: #cfe6ea ; 
+    border-top: 3px solid white;
+}
+
+
+/* The container */
+.radio-evaluation {
+    /* display: block; */
+    position: relative;
+    /* padding-left: 35px;
+    margin-bottom: 12px; */
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* Hide the browser's default radio button */
+.radio-evaluation input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+/* Create a custom radio button */
+.checkmark-pass {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+    border-radius: 50%; 
+    border:1px solid #05bafd;  
+}
+
+.checkmark-fail {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+    border-radius: 50%;
+    border:1px solid red;  
+}
+
+/* On mouse-over, add a grey background color */
+.radio-evaluation:hover input ~ .checkmark-pass {
+    background-color: #ccc;
+}
+
+.radio-evaluation:hover input ~ .checkmark-fail {
+    background-color: #ccc;
+}
+
+/* When the radio button is checked, add a blue background */
+.radio-evaluation input:checked ~ .checkmark-pass {
+    /* background-color: green; */
+    /* background-color: #05bafd; */
+}
+
+.radio-evaluation input:checked ~ .checkmark-fail {
+    /* background-color: red; */
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmark-pass:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.checkmark-fail:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.radio-evaluation input:checked ~ .checkmark-pass:after {
+    display: block;
+}
+
+.radio-evaluation input:checked ~ .checkmark-fail:after {
+    display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.radio-evaluation .checkmark-pass:after {
+    top : 6%;
+    left: 7%;
+    width:  87%;
+    height: 87%;
+	border-radius: 50%;
+	background: #05bafd;
+}
+
+.radio-evaluation .checkmark-fail:after {
+    /* top: 8px;
+   left: 8px; */
+   /* width: 8px;
+   height: 8px; */
+   top : 6%;
+   left: 6.9%;
+   width:  87%;
+   height: 87%;
+   border-radius: 50%;
+   background: red;
+}
+
+.text-blue{
+    color: #05bafd;
+    width: 40%;
+}
+
+.text-red{
+    color: red;
+    width: 40%;
+}
