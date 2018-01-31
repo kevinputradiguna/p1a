@@ -1,4 +1,4 @@
-var app = angular.module('bluebox',['ngRoute','ngTable', 'angularjs-datetime-picker', 'ngSanitize', 'ngResource']);
+var app = angular.module('bluebox',['ngRoute','ngTable', 'angularjs-datetime-picker', 'ngSanitize', 'ngResource','ngAnimate','angularUtils.directives.dirPagination','ngWebworker','blockUI', 'angularModalService']);
 
 app.service('detailServices', function(){
     var historyDetails = "";
@@ -42,7 +42,20 @@ app.service('historyMemberService', function(){
     this.getMemberList = function(){
         return memberList;
     }
-})
+});
+
+app.service('profileConference', function(){
+    var profileJson = {};
+
+    this.setProfileConference = function(profile){
+        profileJson = profile;
+    }
+
+    this.getProfileConference = function(){
+        return profileJson;
+    }
+
+});
 
 app.service('userHeartBeatService', function(Rest){
     this.doHeartBeat = function(){
@@ -57,9 +70,9 @@ app.service('userHeartBeatService', function(Rest){
             console.log("error catch");
         });
     }
-})
+});
 
 app.filter('type', function() {
     return function(obj) {
         return typeof obj;
-    }});
+}});

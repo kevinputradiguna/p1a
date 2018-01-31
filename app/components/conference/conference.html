@@ -1,0 +1,265 @@
+<div class="app-container {{ sideBar.disabled_video_side_nav ? 'background-image-2':'background-image-1' }}">
+        <div class="row conference-row content-container">
+            <!-- Header -->
+            <nav class="navbar navbar-default navbar-fixed-top navbar-top">
+                <div class="container-fluid">
+                    <ul class="nav navbar-nav conference-navbar-right">
+                        <li class="conference-dropdown profile">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                                <span class="icon fa fa-cog fa-2x"></span>
+                            </a>
+                            <ul class="dropdown-menu animated fadeInDown">
+                                <li>
+                                    <div class="profile-info">
+                                        <strong class="username">{{profileJson.userName}}</strong>
+                                        <p>{{profileJson.email}}</p>
+                                        <div class="btn-group margin-bottom-2x" role="group">
+                                            <button type="button" class="btn btn-default btn-logout">
+                                                <i class="fa fa-sign-out"></i> Logout
+                                            </button>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div class="conference-title">
+                    <div class="col-md-{{ ask_question_side_nav? '4': record_video_side_nav ? '8':'12' }} title-course">
+                        <span class="{{ record_video_side_nav? 'recording-video':'' }}">{{roomName}}</span>
+                    </div>
+                </div>
+            </nav>
+            <!-- Header -->
+            <!-- Sidebar -->
+            <div class="side-menu sidebar-inverse">
+                <nav class="navbar navbar-default" role="navigation">
+                    <div class="side-menu-container">
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-expand-toggle pull-right visible-xs">
+                                <i class="fa fa-times icon"></i>
+                            </button>
+                        </div>
+                        <ul class="nav navbar-nav">
+                            <li class="{{ profile_side_nav ? 'active':'' }}">
+                                <a href="#" ng-click="open_content_navigation($event, 1)">
+                                    <span class="icon fa fa-user-o fa-2x"></span>
+                                </a>
+                            </li>
+                            <li class="{{ chat_side_nav ? 'active':'' }}">
+                                <a href="#" ng-click="open_content_navigation($event, 2)">
+                                    <span class="icon fa fa-comment-o"></span>
+                                </a>
+                            </li>
+                            <li class="{{ share_doc_side_nav ? 'active':'' }}">
+                                <a href="#" ng-click="open_content_navigation($event, 3)">
+                                    <span class="icon fa fa-link"></span>
+                                </a>
+                            </li>
+                            <li class="{{ share_screen_side_nav ? 'active':'' }}">
+                                <a href="#" ng-click="open_content_navigation($event, 4)">
+                                    <span class="icon fa fa-desktop"></span>
+                                </a>
+                            </li>
+                            <li class="{{ ask_question_side_nav ? 'disabled_menu':'' }}">
+                                <a href="#" ng-click="open_content_navigation($event, 5)">
+                                    <span class="icon fa fa-hand-paper-o" id="raiseHandIns"></span>
+                                </a>
+                            </li>
+                            <li class="{{ disabled_video_side_nav ? 'disabled_menu':'' }}">
+                                <a href="#" ng-click="open_content_navigation($event, 6)">
+                                    <span class="icon fa-tag fa fa-video-camera custom-fa fa-2x"></span>
+                                </a>
+                            </li>
+                            <li class="{{ disabled_audio_side_nav ? 'disabled_menu':'' }}">
+                                <a href="#" ng-click="open_content_navigation($event, 7)">
+                                    <span class="icon fa fa-microphone fa-2x"></span>
+                                </a>
+                            </li>
+                            <li class="{{ exit_screen_side_nav ? 'active-custom':'' }}">
+                                <a href="#" ng-click="open_content_navigation($event, 8)">
+                                    <span class="icon fa-tag fa fa-phone"></span>
+                                </a>
+                            </li>
+                            <li class="{{ record_video_side_nav ? 'active':'' }}">
+                                <a href="#" ng-click="open_content_navigation($event, 9)">
+                                    <span class="icon fa fa-dot-circle-o"></span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+
+            <div class="sidenav sidebar-inverse {{ contentNav_is_active? 'active-sidenav':'' }} ">
+                <div class="profile-sidenav" ng-show="profile_side_nav">
+                    <div class="header-content-nav">
+                        <div class="col-md-12">
+                            <span class="icon fa fa-user-o fa-1.5x"></span>
+                            <span>Profile</span>
+                            <a href="#" ng-click="close_content_navigation($event, 1)">
+                                <span class="icon fa fa-angle-double-left fa-1x pull-right"></span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="body-content-nav">
+                        <div class="col-md-12">
+                            <div class="profile">
+                                <img class="thumbnail" ng-src="{{ profile.url_image }}">
+                                <center>{{profileJson.userName}}</center>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="body">
+                                <div class="clear">
+                                    <label>Email</label>
+                                    <br>
+                                    <span>{{profileJson.email}}</span>
+                                </div>
+                                <div class="clear">
+                                    <label>Company</label>
+                                    <br>
+                                    <span>{{profileJson.company}}</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="chat-sidenav" ng-show="chat_side_nav">
+                    <div class="header-content-nav">
+                        <div class="col-md-12">
+                            <span class="icon fa fa-comment-o fa-1.5x"></span>
+                            <span>Message</span>
+                            <a href="#" ng-click="close_content_navigation($event, 2)">
+                                <span class="icon fa fa-angle-double-left fa-1x pull-right"></span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="body-content-nav">
+                        <div class="col-md-12">
+                            <div class="row conference-row">
+                                <div class="main_section">
+                                    <div class="container">
+                                        <div class="chat_container">
+                                            <div class="col-sm-3 chat_sidebar">
+                                                <div class="member_list">
+                                                    <ul class="list-unstyled">
+                                                        <li class="left clearfix" ng-repeat="message in messages">
+                                                            <span class="chat-img pull-{{ message.messageClass == 0? 'left':'right' }}">
+                                                                <img ng-src="{{ message.imgUrl }}" alt="User Avatar" class="img-circle">
+                                                            </span>
+                                                            <div class="chat-body clearfix">
+                                                                <div class="{{ message.messageClass == 0? 'pull-left':'chat-right pull-right' }}">
+                                                                    <strong>{{ message.name }}</strong>
+                                                                </div>
+                                                                <div class="contact_sec">
+                                                                    <small class="pull-left primary-font">{{ message.message }}</small>
+                                                                </div>
+                                                            </div>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <br>
+                            <div class="row conference-row">
+                                <center>
+                                    <label class="text-center">Member {{totalMember}} (30 Online)</label>
+                                </center>
+                                <div class="container">
+                                    <div class="online_container">
+                                        <div class="col-sm-3">
+                                            <div class="online_list">
+                                                <ul class="list-unstyled">
+                                                    <li class="left clearfix" ng-repeat="member in memberData">
+                                                        <span class="icon fa fa-circle text-{{ member.onlineStatus == 1? 'success': 'danger' }}"></span>
+                                                        {{ member.name }}
+                                                        <span class="icon fa fa-hand-paper-o" id={{member.connectioId}} ng-click="choosenMember($event,member.connectionId)" style="visibility:hidden;"></span>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <!--chat_sidebar-->
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row conference-row">
+                                <div class="message_write">
+                                    <div class="col-sm-12">
+                                        <textarea class="form-control" placeholder="type a message" ng-model="msg"></textarea>
+                                        <div class="clearfix"></div>
+                                        <a href="#" ng-click="sendMessage($event);" class="pull-right btn btn-success">
+                                            Send
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="share-doc-sidenav" ng-show="share_doc_side_nav">
+                    <div class="header-content-nav">
+                        <div class="col-md-12">
+                            <span class="icon fa fa-link fa-1.5x"></span>
+                            <span>Share Document</span>
+                            <a href="#" ng-click="close_content_navigation($event, 3)">
+                                <span class="icon fa fa-angle-double-left fa-1x pull-right"></span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="body-content-nav">
+                        <div class="col-md-12">
+                            <ul class="file-share">
+                                <li ng-repeat="files in documents track by $index">
+
+                                    <span class="file icon fa fa-file-{{ files.type_file }}-o fa-2x"></span>
+                                    <span class="text"> {{ files.title }}</span>
+                                    <a href="#" title="{{ files.description }}">
+                                        <span ng-if="$index <= 5" class="trash icon fa fa-cloud-download fa-1x"></span>
+                                        <span ng-if="$index > 5" class="trash icon fa fa-trash-o fa-1x"></span>
+                                    </a>
+
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="col-md-12">
+                                <input type="file" class="form-control">
+                            </div>
+                            <div class="col-md-12">
+                                <span class="space-clear"></span>
+                                <button class="btn btn-danger btn-block" type="file">
+                                    <span class="icon fa fa-cloud-upload fa-2x"></span>
+                                    <small>UPLOAD FILE</small>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End sidebar -->
+            <!-- Home -->
+            <div>
+                <div id="videos">
+                    <div id="subscriber"></div>
+                    <div id="publisher"></div>
+                </div>
+                <div ng-if="ask_question_side_nav">
+                    <div class="container-wrap-video">
+                        <div class="video-myself"></div>
+                        <span>Prof.Dr. Teguh Santoso</span>
+                    </div>
+                </div>
+                <div ng-if="record_video_side_nav">
+                    <div class="record-caption">
+                        <span class="icon fa fa-circle text-danger"></span>
+                        REC
+                    </div>
+                </div>
+            </div>
+            <!-- End Home -->
+        </div>
+    </div>

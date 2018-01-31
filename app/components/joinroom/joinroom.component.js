@@ -1,4 +1,4 @@
-function JoinroomController($scope, Rest, $q, $route, $location, $filter, $sce, $resource,CONFIG,detailServices,locationService,NgTableParams, userHeartBeatService){
+function JoinroomController($scope, Rest, $q, $route, $location, $filter, $sce, $resource,CONFIG,detailServices,locationService,NgTableParams, userHeartBeatService, profileConference){
     var ctrl = this;
     var arrayJoinroom = [];
 
@@ -78,6 +78,7 @@ function JoinroomController($scope, Rest, $q, $route, $location, $filter, $sce, 
 
     
     $scope.joiningRoom = function(roomName, schedule){
+        localStorage.setItem('roomName', roomName);
         console.log("this enter");
         var hdrs = {
             "X-TOKEN": localStorage.getItem("edplusId")
@@ -89,9 +90,16 @@ function JoinroomController($scope, Rest, $q, $route, $location, $filter, $sce, 
         Rest.post('/v1/joinRoom', body, hdrs)
         .success(function(result){
             if(result.status == 0){
-                console.log("this success");
-            }else{
-                $scope.alertValue = true;
+                localStorage.setItem('sessionId', result.data.sessionId);
+                localStorage.setItem('token', result.data.token);
+                localStorage.setItem('apiKey', result.data.apiKey);
+                profileConference.setProfileConference(result.data.profileData);
+                localStorage.setItem('propic',result.data.profileData.picture);
+                localStorage.setItem('insId', result.data.insId);
+                localStorage.setItem('isInstructor', result.data.isInstructor);
+                localStorage.setItem('roomMember', JSON.stringify(result.data.memberData));
+                localStorage.setItem('totalMember',result.data.totalMember);
+                $location.url('/conference').replace();
             }
         })
         .error(function(error, status){

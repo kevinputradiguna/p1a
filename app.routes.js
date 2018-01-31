@@ -16,7 +16,8 @@ app.config(function ($routeProvider) {
 		})
 
 		.when('/conference',{
-			template: "<demo></demo>"
+			template: "<conference></conference>",
+			activetab: 'conference'
 		})
 
 		.when('/evaluation',{
