@@ -2,7 +2,6 @@ function CreateRoomController($scope, Rest, $q, $sce, $route, $location, $compil
     var ctrl = this;
     var arrayInstructor = [];
     $scope.email = [];
-    // $scope.domList = [];
     $scope.skpPoints = 1;
     $scope.totalMembersInvited = 1;
     $scope.minWatching = 1;
@@ -10,8 +9,6 @@ function CreateRoomController($scope, Rest, $q, $sce, $route, $location, $compil
     ctrl.$onInit = function () {
         userHeartBeatService.doHeartBeat();
         ctrl.initializeRoom();
-        //document.getElementById('emailAppended').append('<div class="col-md-6" id="emails0"><input type="text" ng-model="email[0]"></div>');
-        //document.createElement('<div class="col-md-12" id="emails0"><input type="text" ng-model="email[0]"/></div>')
         addEmailChild($scope.totalMembersInvited);
         $scope.data = {
             duration: null,
@@ -33,15 +30,6 @@ function CreateRoomController($scope, Rest, $q, $sce, $route, $location, $compil
         locationService.setSubLocation('Create Room');
     };
 
-    // ctrl.createInitialElement(){
-    //     var myoption = document.createElement("div");
-    //     myOption.setAttribute("id","emails0");
-    //     myoption.setAttribute("value", "carvalue");
-    //     var text = document.createTextNode("maruti");
-    //     myoption.appendChild(text);
-    //     document.getElementById("mySelect").appendChild(myoption);
-    // }
-
     ctrl.initializeRoom = function () {
         Rest.get('/v1/room')
             .success(function (result) {
@@ -52,27 +40,7 @@ function CreateRoomController($scope, Rest, $q, $sce, $route, $location, $compil
             });
     };
 
-    // $scope.completed = function(ins){
-    //     var outputName = [];
-    //     angular.forEach(arrayInstructor, function(instructorId){
-    //         if(instructorId.firstName.toLowerCase().indexOf(ins.toLowerCase()) >-1){
-    //             outputName.push(instructorId);
-    //         }
-    //     });
-    //     $scope.filterInstructor = outputName;
-    // }
-
-    // $scope.fillInstructorBox = function(ins){
-    //     // var outputFull = [];
-    //     // angular.forEach(arrayInstructor, function(instructorId){
-    //     //     if(instructorId.firstName.toLowerCase().indexOf(ins.toLowerCase()) >-1){
-    //     //         outputFull.push(instructorId);
-    //     //     }
-    //     $scope.instructor = ins.firstName+' '+ins.lastName;
-    //     $scope.hidethis = true;
-
-    // }
-
+ 
     $scope.completed = function (ins) {
         $scope.hidethis = false;
         var output = [];
@@ -104,16 +72,24 @@ function CreateRoomController($scope, Rest, $q, $sce, $route, $location, $compil
 
     $scope.createRoom = function ($event) {
         $event.preventDefault();
+
+        //convert string date from $scope.date3 to utc date
+        var dateConvert = new Date(Date.parse($scope.date3)).toISOString();
+        var datepart = dateConvert.substring(0,10);
+        var timepart = dateConvert.substring(11, 19);
+        var UTCstringTime = datepart + " " + timepart;
+
         var roomObject = {};
         roomObject['instructor'] = jsonInstructor;
         roomObject['roomName'] = $scope.roomName;
-        roomObject['schedule'] = $scope.date3;
+        roomObject['schedule'] = UTCstringTime;
         roomObject['duration'] = parseInt($scope.data.duration);
         roomObject['minWatching'] = $scope.minWatching;
         roomObject['skpPoint'] = $scope.skpPoints;
         roomObject['totalMember'] = $scope.email.length;
         roomObject['email'] = $scope.email;
-        Rest.post('/v1/createDemo', roomObject)
+
+        Rest.post('/v1/room', roomObject)
             .success(function (result) {
                 localStorage.setItem('sessionId', result.data.sessionId);
                 localStorage.setItem('token', result.data.token);
@@ -141,14 +117,7 @@ function CreateRoomController($scope, Rest, $q, $sce, $route, $location, $compil
         createdElement.setAttribute("id", "emails" + number);
         createdElement.appendChild(innerElementHtml);
         var documentAppended = document.getElementById('emailAppended');
-        // var compile = $compile(innerElementHtml)($scope.email);
-
         documentAppended.appendChild(createdElement);
-        // var htmlJson = {};
-        // var htmlSyntax = "<div id=\"emails"+number+" class=\"col-md-12\"\"><input type=\"text\" ng-model=\"email["+number+"]\"/></div>";
-        // htmlJson['html'] = htmlSyntax;
-        //$scope.domList.push(document.createElement('<div class="col-md-12" id="emails'+number+'"><input type="text" ng-model="email['+number+']"></div>'));
-        // $scope.domList.push($sce.trustAsHtml( htmlSyntax));
     }
 
     function removeEmailChild(numberEmail) {
@@ -156,9 +125,7 @@ function CreateRoomController($scope, Rest, $q, $sce, $route, $location, $compil
         var documentAppended = document.getElementById('emailAppended');
         var child = document.getElementById('emails' + number);
         documentAppended.removeChild(child)
-        // var documentTr = document.getElementById('emailTr');
-        // var child = document.getElementById('emails'+number);
-        // $scope.domList.splice(number,1);
+
     }
 
     var beforeInput = $scope.totalMembersInvited;
@@ -173,14 +140,13 @@ function CreateRoomController($scope, Rest, $q, $sce, $route, $location, $compil
 
             }
         } else if (beforeInput < $scope.totalMembersInvited) {
-            // var diff =  $scope.totalMembersInvited - beforeInput;
             for (var index = beforeInput; index < $scope.totalMembersInvited; index++) {
                 addEmailChild(index + 1);
             }
             beforeInput = $scope.totalMembersInvited;
 
         }
-        //$scope.emailTable = new NgTableParams({page:1,count:5}, {counts:[5,10,20], dataset : $scope.domList, total : $scope.domList.length});
+        
     }
 
     $scope.topMenu = CONFIG.topMenu;

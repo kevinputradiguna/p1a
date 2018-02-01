@@ -16,7 +16,18 @@
                 </div>
                 <div class="col-md-8">
                     <input type="text" class="InstructorNameAutoComplete" name="instructor" ng-model="instructor" ng-keyup="completed(instructor)"/>
-                    <ul class="list-group" ng-model="hidethis" ng-hide="hidethis">
+                    <!-- <ul class="list-group" ng-model="hidethis" ng-hide="hidethis">
+                        <li class="list-group-item" ng-repeat="instructorData in filterInstructor" ng-click="fillInstructorBox(instructorData)">{{instructorData.firstName + " " +instructorData.lastName}}</li>
+                    </ul> -->
+                </div>
+            </div>
+            <br>
+            <div class="row" ng-hide="hidethis">
+                <div class="col-md-4">
+                    <label></label>
+                </div>
+                <div class="col-md-8">
+                    <ul class="list-group" ng-model="hidethis">
                         <li class="list-group-item" ng-repeat="instructorData in filterInstructor" ng-click="fillInstructorBox(instructorData)">{{instructorData.firstName + " " +instructorData.lastName}}</li>
                     </ul>
                 </div>
@@ -74,7 +85,7 @@
                     <label>File Reference(s)</label>
                 </div>
                 <div class="col-md-8">
-                    <input type="file" class="fileInput" name="files" ng-model="files" multiple/>
+                    <input type="file" class="fileInput" name="files" ng-model="filesUpload" multiple/>
                 </div>
             </div>
             <br>
@@ -104,6 +115,7 @@
                 </div>
                 <div class="col-md-8 text-center">
                     <a class="btn btn-primary button-blue" href="#" ng-click="createRoom($event);">Create Room</a>
+                    <!-- <input type="submit" class="btn btn-primary button-blue" value="Create Room" /> -->
                 </div>
             </div>
         </div>
